@@ -161,7 +161,6 @@ body {
   border: none;
   color: #1d1d1d;
   font-family: "Montserrat", "Helvetica Neue", "Helvetica", sans-serif;
-  -webkit-text-size-adjust: 100%;
 }
 
 * {
@@ -580,8 +579,8 @@ input[type="tel"],
 input[type="color"],
 textarea {
   -webkit-appearance: none;
-  appearance: none;
   -moz-appearance: none;
+  appearance: none;
   color: #333;
   padding: 17px 20px;
   background: #fff;
@@ -641,8 +640,8 @@ input[type="button"],
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
   text-transform: uppercase;
   -webkit-appearance: none;
-  appearance: none;
   -moz-appearance: none;
+  appearance: none;
 }
 
 :root .is-style-outline .wp-block-button__link,
@@ -1502,7 +1501,6 @@ input[type="button"],
   max-width: 85%;
   margin: 0 auto;
   padding: 80px 0 90px;
-  height: fit-content;
 }
 
 .post-header + .post-inner {
@@ -2575,8 +2573,8 @@ p.comment-form-author {
 
 .search-button {
   -moz-appearance: none;
-  appearance: none;
   -webkit-appearance: none;
+  appearance: none;
   background: transparent;
   cursor: pointer;
   padding: 0;
@@ -2687,8 +2685,8 @@ img#wpstats {
 
   .nav-toggle {
     -moz-appearance: none;
-    appearance: none;
     -webkit-appearance: none;
+    appearance: none;
     color: #fff;
     display: block;
     padding: 16px 0;
