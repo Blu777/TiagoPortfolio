@@ -1452,7 +1452,7 @@ input[type="button"],
 
 .post-container {
   background: #fff;
-  height: 550px;
+  height: fit-content;
 }
 
 /* Featured Media ---------------------------- */
