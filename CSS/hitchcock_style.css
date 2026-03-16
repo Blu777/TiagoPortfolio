@@ -207,7 +207,8 @@ img {
 
 /* Screen Reader Text ------------------------ */
 
-.screen-reader-text {
+.screen-reader-text,
+.sr-only {
   clip: rect(0.1rem, 0.1rem, 0.1rem, 0.1rem);
   height: 0.1rem;
   overflow: hidden;
@@ -784,6 +785,7 @@ input[type="button"],
 .main-menu li:hover > a,
 .main-menu li.current-menu-item > a {
   color: #fff;
+  border-bottom: 2px solid #3bc492;
 }
 
 .main-menu > li.menu-item-has-children > a,

@@ -1,18 +1,4 @@
-@font-face {
-  font-family: "Font Awesome 5";
-  font-style: normal;
-  font-weight: normal;
-  src: url(../fonts/fa-solid-900.woff2) format("woff2"),
-    url(../fonts/fa-solid-900.woff) format("woff");
-}
-
-@font-face {
-  font-family: "Font Awesome 5 Brands";
-  font-style: normal;
-  font-weight: normal;
-  src: url(../fonts/fa-brands-400.woff2) format("woff2"),
-    url(../fonts/fa-brands-400.woff) format("woff");
-}
+/* FontAwesome loaded via CDN in HTML */
 
 /*!
  * Font Awesome Free 5.9.0 by @fontawesome - https://fontawesome.com
