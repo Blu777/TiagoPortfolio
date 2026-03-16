@@ -39,47 +39,7 @@
 
 ----------------------------------------------------------------------------------- */
 
-@font-face {
-  font-family: "BebasNeue-Regular";
-  src: url("assets/fonts/lr/BebasNeue-Regular.eot");
-}
-@font-face {
-  font-family: "BebasNeue-Regular";
-  src: url("assets/fonts/lr/BebasNeue-Regular.ttf");
-  font-weight: bold;
-}
-@font-face {
-  font-family: "BebasNeue-Regular";
-  src: url("assets/fonts/lr/BebasNeue-Regular.woff");
-  font-style: italic, oblique;
-}
-@font-face {
-  font-family: "BebasNeue-Regular";
-  src: url("assets/fonts/lr/BebasNeue-Regular.woff2");
-  font-weight: bold;
-  font-style: italic, oblique;
-}
-
-@font-face {
-  font-family: "lato-light";
-  src: url("assets/fonts/lr/lato-light.eot");
-}
-@font-face {
-  font-family: "lato-light";
-  src: url("assets/fonts/lr/lato-light.ttf");
-  font-weight: bold;
-}
-@font-face {
-  font-family: "lato-light";
-  src: url("assets/fonts/lr/lato-light.woff");
-  font-style: italic, oblique;
-}
-@font-face {
-  font-family: "lato-light";
-  src: url("assets/fonts/lr/lato-light.woff2");
-  font-weight: bold;
-  font-style: italic, oblique;
-}
+/* Fonts handled via Google Fonts in HTML */
 
 /* -------------------------------------------------------------------------------- */
 /*	0. CSS Reset
@@ -160,7 +120,8 @@ body {
   background: #1d1d1d;
   border: none;
   color: #1d1d1d;
-  font-family: "Montserrat", "Helvetica Neue", "Helvetica", sans-serif;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 300;
 }
 
 * {
@@ -303,9 +264,10 @@ h4,
 h5,
 h6 {
   margin: 50px 0 25px;
-  font-family: "Montserrat", "Helvetica Neue", "Helvetica", sans-serif;
+  font-family: 'Outfit', sans-serif;
   font-weight: 700;
   text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 h1 {
