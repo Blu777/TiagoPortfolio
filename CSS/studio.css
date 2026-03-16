@@ -1,0 +1,694 @@
+/* =====================================================
+   studio.css — Tiago Natale Portfolio | Studio Theme
+   ===================================================== */
+
+:root {
+  --bg: #0a0a0a;
+  --surface: #111111;
+  --card-bg: #161616;
+  --card-hover: #1d1d1d;
+  --border: #242424;
+  --border-light: #2e2e2e;
+  --accent: #ff6b2b;
+  --accent-light: #ff8c55;
+  --accent-dim: rgba(255, 107, 43, 0.12);
+  --accent-glow: rgba(255, 107, 43, 0.35);
+  --text-primary: #f0f0f0;
+  --text-sec: #888888;
+  --text-muted: #4a4a4a;
+  --font: "Outfit", sans-serif;
+  --radius: 14px;
+  --radius-sm: 8px;
+  --radius-xs: 4px;
+  --shadow-card: 0 4px 32px rgba(0, 0, 0, 0.7);
+  --shadow-hover: 0 12px 48px rgba(0, 0, 0, 0.85), 0 0 0 1px var(--accent-dim);
+  --t: 0.2s ease;
+}
+
+/* ================================================================
+   BASE OVERRIDES  (also corrects hitchcock_style.css conflicts)
+   ================================================================ */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: var(--bg) !important;
+  color: var(--text-primary) !important;
+  font-family: var(--font) !important;
+}
+
+a {
+  transition: color var(--t);
+}
+
+/* hitchcock sets section-inner to width:1040px — unlock it */
+.content.section-inner,
+#site-content .content.section-inner {
+  width: 100% !important;
+  max-width: 1260px !important;
+}
+
+/* hitchcock sets header.section-inner to width:325px — expand it */
+.header.section-inner {
+  width: 100% !important;
+  max-width: 680px !important;
+}
+
+/* hitchcock default button green — reset for our player button */
+.btn-play,
+.btn-play:hover {
+  background-color: var(--accent) !important;
+  border-radius: 50% !important;
+  padding: 0 !important;
+  font-family: inherit !important;
+  text-shadow: none !important;
+}
+
+.btn-play:hover {
+  background-color: var(--accent-light) !important;
+}
+
+/* hitchcock h1-h6 margin:50px 0 25px breaks card layout */
+.card-title,
+.card-artist,
+.section-label h2,
+.card-body h3,
+.card-body h2 {
+  margin: 0 !important;
+  text-transform: none !important;
+  letter-spacing: inherit !important;
+}
+
+/* hitchcock active nav item adds green border-bottom */
+.main-menu li:hover > a,
+.main-menu li.current-menu-item > a,
+.main-menu li.current_page_item > a {
+  border-bottom-color: var(--accent) !important;
+  color: var(--accent) !important;
+}
+
+/* hitchcock blog-description uses Droid Serif */
+.blog-description,
+.blog-description p {
+  font-family: var(--font) !important;
+  margin-top: 6px !important;
+}
+
+/* ================================================================
+   NAVIGATION
+   ================================================================ */
+
+.navigation {
+  background: rgba(10, 10, 10, 0.96) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border) !important;
+  position: sticky !important;
+  top: 0;
+  z-index: 200;
+}
+
+.navigation .section-inner {
+  padding: 0 32px;
+}
+
+.navigation .main-menu > li > a {
+  color: var(--text-sec) !important;
+  font-family: var(--font) !important;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.navigation .main-menu > li > a:hover,
+.navigation .main-menu > li.current-menu-item > a {
+  color: var(--accent) !important;
+}
+
+.navigation .sub-menu {
+  background: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--radius-sm) !important;
+  box-shadow: var(--shadow-card) !important;
+}
+
+.navigation .sub-menu a {
+  color: var(--text-sec) !important;
+  font-family: var(--font) !important;
+  font-size: 12px;
+}
+
+.navigation .sub-menu a:hover {
+  color: var(--accent) !important;
+}
+
+.nav-toggle .bar {
+  background-color: var(--text-sec) !important;
+}
+.nav-toggle:hover .bar {
+  background-color: var(--accent) !important;
+}
+
+.mobile-navigation {
+  background: var(--surface) !important;
+  border-top: 1px solid var(--border) !important;
+}
+
+.mobile-menu a {
+  color: var(--text-sec) !important;
+  font-family: var(--font) !important;
+}
+
+.mobile-menu a:hover {
+  color: var(--accent) !important;
+}
+
+/* ================================================================
+   HEADER
+   ================================================================ */
+
+.header-image {
+  height: 280px;
+  background-size: cover;
+  background-position: center top;
+  position: relative;
+}
+
+.header-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 10, 10, 0.3) 0%,
+    rgba(10, 10, 10, 0.92) 100%
+  );
+}
+
+.header.section-inner {
+  text-align: center;
+  padding: 0 24px 40px;
+  margin-top: -70px;
+  position: relative;
+  z-index: 2;
+}
+
+.blog-title a,
+.header .blog-title {
+  font-family: var(--font) !important;
+  font-weight: 700;
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
+  color: var(--text-primary) !important;
+  letter-spacing: -0.025em;
+  text-decoration: none;
+  display: block;
+  line-height: 1.1;
+}
+
+.blog-description p {
+  color: var(--accent) !important;
+  font-family: var(--font) !important;
+  font-weight: 400;
+  font-size: 0.85rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  margin-top: 8px;
+}
+
+/* ================================================================
+   SECTION LABEL
+   ================================================================ */
+
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.section-label h2 {
+  font-family: var(--font);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-sec);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.section-label-line {
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* ================================================================
+   MAIN CONTENT
+   ================================================================ */
+
+#site-content .content.section-inner {
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 56px 28px 80px;
+}
+
+/* ================================================================
+   TRACKS GRID
+   ================================================================ */
+
+.tracks-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* ================================================================
+   TRACK CARD
+   ================================================================ */
+
+.track-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition:
+    transform var(--t),
+    box-shadow var(--t),
+    border-color var(--t);
+  box-shadow: var(--shadow-card);
+}
+
+.track-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--border-light);
+}
+
+/* ---- Art ---- */
+.card-art {
+  position: relative;
+  padding-top: 100%;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.card-art-inner {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 45%,
+    rgba(10, 10, 10, 0.75) 100%
+  );
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 12px 14px;
+}
+
+.card-badge {
+  display: inline-flex;
+  align-items: center;
+  background: var(--accent);
+  color: #fff;
+  font-family: var(--font);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 3px 9px;
+  border-radius: 999px;
+  flex-shrink: 0;
+}
+
+.card-badge.badge-master {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
+
+/* ---- Waveform animation ---- */
+.waveform {
+  display: flex;
+  align-items: flex-end;
+  gap: 2.5px;
+  height: 22px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.track-card.is-playing .waveform {
+  opacity: 1;
+}
+
+.waveform span {
+  display: block;
+  width: 3px;
+  background: var(--accent);
+  border-radius: 2px;
+  height: 3px;
+}
+
+.track-card.is-playing .waveform span:nth-child(1) {
+  animation: vu 0.75s ease-in-out infinite;
+}
+.track-card.is-playing .waveform span:nth-child(2) {
+  animation: vu 0.75s ease-in-out 0.13s infinite;
+}
+.track-card.is-playing .waveform span:nth-child(3) {
+  animation: vu 0.75s ease-in-out 0.25s infinite;
+}
+.track-card.is-playing .waveform span:nth-child(4) {
+  animation: vu 0.75s ease-in-out 0.08s infinite;
+}
+.track-card.is-playing .waveform span:nth-child(5) {
+  animation: vu 0.75s ease-in-out 0.19s infinite;
+}
+.track-card.is-playing .waveform span:nth-child(6) {
+  animation: vu 0.75s ease-in-out 0.31s infinite;
+}
+.track-card.is-playing .waveform span:nth-child(7) {
+  animation: vu 0.75s ease-in-out 0.07s infinite;
+}
+
+@keyframes vu {
+  0%,
+  100% {
+    height: 3px;
+  }
+  50% {
+    height: 18px;
+  }
+}
+
+/* ---- Card Body ---- */
+.card-body {
+  padding: 16px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+}
+
+.card-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.card-artist {
+  font-family: var(--font);
+  font-size: 10px;
+  font-weight: 600;
+  color: var(--accent);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.card-title {
+  font-family: var(--font);
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+  margin: 0;
+}
+
+/* ---- Player ---- */
+.card-player {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.player-row-1 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btn-play {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: none;
+  background: var(--accent);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-size: 12px;
+  transition:
+    background var(--t),
+    box-shadow var(--t),
+    transform var(--t);
+  outline: none;
+}
+
+.btn-play:hover {
+  background: var(--accent-light);
+  box-shadow: 0 0 18px var(--accent-glow);
+  transform: scale(1.07);
+}
+
+.btn-play:active {
+  transform: scale(0.97);
+}
+
+/* play icon offset */
+.btn-play .fa-play {
+  margin-left: 2px;
+}
+
+/* timeline */
+.player-timeline {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.progress-track {
+  position: relative;
+  height: 4px;
+  background: var(--border);
+  border-radius: 2px;
+  overflow: visible;
+  cursor: pointer;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(to right, var(--accent), var(--accent-light));
+  border-radius: 2px;
+  pointer-events: none;
+  position: relative;
+  z-index: 1;
+  transition: width 0.08s linear;
+}
+
+.progress-fill::after {
+  content: "";
+  position: absolute;
+  right: -4px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent-light);
+  box-shadow: 0 0 8px var(--accent-glow);
+  opacity: 0;
+  transition: opacity 0.15s;
+}
+
+.progress-track:hover .progress-fill::after {
+  opacity: 1;
+}
+
+.seek-input {
+  position: absolute;
+  inset: -6px 0;
+  width: 100%;
+  height: calc(100% + 12px);
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+  appearance: none;
+  -webkit-appearance: none;
+  margin: 0;
+  padding: 0;
+}
+
+.time-row {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font);
+  font-size: 10px;
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.03em;
+}
+
+/* volume row */
+.volume-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+.vol-icon {
+  color: var(--text-muted);
+  font-size: 10px;
+  width: 14px;
+  cursor: pointer;
+  transition: color var(--t);
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.vol-icon:hover {
+  color: var(--accent);
+}
+
+.vol-input {
+  flex: 1;
+  appearance: none;
+  -webkit-appearance: none;
+  height: 3px;
+  background: var(--border);
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+}
+
+.vol-input::-webkit-slider-runnable-track {
+  height: 3px;
+  border-radius: 2px;
+  background: var(--border);
+}
+
+.vol-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--text-sec);
+  cursor: pointer;
+  margin-top: -4.5px;
+  transition:
+    background var(--t),
+    transform var(--t);
+}
+
+.vol-input:hover::-webkit-slider-thumb {
+  background: var(--accent);
+  transform: scale(1.15);
+}
+
+.vol-input::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--text-sec);
+  cursor: pointer;
+  border: none;
+}
+
+.vol-input:hover::-moz-range-thumb {
+  background: var(--accent);
+}
+
+/* ================================================================
+   CREDITS / FOOTER
+   ================================================================ */
+
+.credits {
+  border-top: 1px solid var(--border) !important;
+  padding: 28px 24px !important;
+  text-align: center;
+  background: var(--bg) !important;
+}
+
+.credits p,
+.credits a {
+  font-family: var(--font) !important;
+  font-size: 12px !important;
+  color: var(--text-muted) !important;
+  text-decoration: none;
+}
+
+.credits a:hover {
+  color: var(--accent) !important;
+}
+
+/* ================================================================
+   MISC
+   ================================================================ */
+
+.skip-link {
+  display: none !important;
+}
+
+/* ================================================================
+   RESPONSIVE
+   ================================================================ */
+
+@media (max-width: 1024px) {
+  .tracks-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+}
+
+@media (max-width: 680px) {
+  .tracks-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .card-art {
+    padding-top: 75%;
+  }
+
+  #site-content .content.section-inner {
+    padding: 36px 16px 60px;
+  }
+
+  .header-image {
+    height: 200px;
+  }
+
+  .header.section-inner {
+    margin-top: -55px;
+  }
+
+  .navigation .section-inner {
+    padding: 0 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  .card-body {
+    padding: 13px 14px 15px;
+  }
+  .card-title {
+    font-size: 15px;
+  }
+}
